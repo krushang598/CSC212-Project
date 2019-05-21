@@ -3,28 +3,38 @@
 #include <vector>
 #include <stdl>
 #include <string>
+#include <algorithm>
 #include "Maze_BST.h"
 
+using namespace std;
 
+Maze create_game(int difficulty, vector<vector<std:string>> every_challenge){
+    
+}
+bool node_play(node *ptr){
+    string player_answer, correct_answer;
+    vector<string> challenge;
+    challenge = ptr.challenge();
+    correct_answer = challenge.at(2);
+    
+    cout << "This is a " << challenge.at(0) << " challenge." <<endl<<endl;
+    cout << challenge.at(1) <<endl;
+    cout << "Answer: ";
+    cin >> player_answer;
+    
+    transform(correct_answer.begin(), correct_answer.end(), correct_answer.begin(), ::tolower);
+    transform(player_answer.begin(), player_answer.end(), player_answer.begin(), ::tolower);
+    
+    if(player_answer == correct_answer){return True;}
+    else{return False;}
+    
+    
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+bool node_battle(node *ptr){
+}
+bool play_game(Maze game_board){
+}
 
 
 
