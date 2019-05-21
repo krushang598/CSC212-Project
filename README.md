@@ -10,5 +10,5 @@ How to run: Run the cmake file to run every file together
 ##### Participants
 David A. A. Balaban
 
-Krushang Sang
+Krushang Shah
 
