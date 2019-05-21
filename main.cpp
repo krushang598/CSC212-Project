@@ -4,8 +4,6 @@
 #include <iostream>
 #include "Maze_BST.h"
 
-vector<vector<string>> create_challenge_set();
-
 using namespace std;
 
 int main()
