@@ -5,12 +5,27 @@
 #include <string>
 #include "Maze_BST.h"
 
-using namespace std;
 
-int main()
-{
 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -28,7 +43,7 @@ vector<vector<string>> create_challenge_set(){
     vector<vector<string>> full_set;
     vector<string> single_challenge;
     
-    /*Firstly the Trivia set (11 problems)*/
+    /*Trivia set (11 problems)*/
     vector<string> trivia_q;
     vector<string> trivia_a;
     //1
@@ -77,12 +92,12 @@ vector<vector<string>> create_challenge_set(){
     }
     
     
-    /*Puzzles*/
+    /*Puzzles Set (10 problems)*/
     
     vector<string> puzzle_q;
     vector<string> puzzle_a;
     
-        //12
+    //12
     puzzle_q.push_back("It is flat as a leaf, round as a ring, Has two eyes, yet cannot see a thing. What is it ? ");
     puzzle_a.push_back("Button");
     //13
@@ -125,14 +140,11 @@ vector<vector<string>> create_challenge_set(){
         single_challenge.erase(single_challenge.begin(),single_challenge.end());
     }
     /*
-    Battle
+    Battle Set (10 problems)
     
     vector<string> battle_q;
     vector<string> battle_a;
     
-    //22
-    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
-    battle_a.push_back("Charcoal");
     //23
     battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
     battle_a.push_back("Charcoal");
@@ -158,6 +170,9 @@ vector<vector<string>> create_challenge_set(){
     battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
     battle_a.push_back("Charcoal");
     //31
+    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    battle_a.push_back("Charcoal");
+    //32
     battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
     battle_a.push_back("Charcoal");
     */
