@@ -129,8 +129,8 @@ vector<vector<string>> create_challenge_set(){
         full_set.push_back(single_challenge);
         single_challenge.erase(single_challenge.begin(),single_challenge.end());
     }
-    
-    /*Battle*/
+    /*
+    Battle
     
     vector<string> battle_q;
     vector<string> battle_a;
@@ -165,7 +165,7 @@ vector<vector<string>> create_challenge_set(){
     //31
     battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
     battle_a.push_back("Charcoal");
-    
+    */
     
     
     return full_set;
