@@ -37,11 +37,11 @@ int main()
                 {
                     index = true;
                 }
-                else if(select = 2)
+                else if(select == 2)
                 {
                     index = true;
                 }
-                else if(select = 3)
+                else if(select == 3)
                 {
                     index = true;
                 }
@@ -56,10 +56,21 @@ int main()
         else if(menu == 2)
         {
             diff_level = true;
+            cout << "This is a BST maze, each room has a different challenge. There are three types of rooms: Trivia, Puzzle and Battle\n"
+                 << "Win the challenge and you can advance to the node to your right, lose a challenge and you advance to your left.\n"
+                 << "If you move to the left twice in a row, you lost and you are prompted with the choice of either trying again or quitting.\n"
+                 << "Player wins when he wins the challenge at the last level.\n";
+                 << "Trivia:\n"
+                 << "Answer a trivia question from any possible subject.\n"
+                 << "Puzzle:\n"
+                 << "Solve a brain teaser to pass.\n"
+                 << "Battle:\n"
+                 << "10 questions need to be answered on a set time interval.\nAnswer at least 5 questions correctly to pass.\n";                     
         }
         else if(menu == 3)
         {
             diff_level = true;
+            goto end;
         }
         else
         {
@@ -70,7 +81,7 @@ int main()
     
     
     
-    
-    
+    end:
+    return 0;
 }
 
