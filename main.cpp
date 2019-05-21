@@ -82,6 +82,18 @@ vector<vector<string>> create_challenge_set(){
     
     /*Puzzles*/
     
+    vector<string> puzzle_q;
+    vector<string> puzzle_a;
+    
+    
+    for(int j = 0; j < 10; j++){
+        single_challenge.push_back("Puzzle");
+        single_challenge.push_back(puzzle_q.at(i));
+        single_challenge.push_back(puzzle_a.at(i));
+        full_set.push_back(single_challenge);
+        single_challenge.erase(single_challenge.begin(),single_challenge.end());
+    }
+    
     
     
     
