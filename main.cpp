@@ -1,11 +1,89 @@
 //Main
-
+#include <string>
+#include <vector>
 #include <iostream>
 #include "Maze_BST.h"
+
+vector<vector<string>> create_challenge_set();
 
 using namespace std;
 
 int main()
 {
     
+    
+    
+    
+    
+    
+}
+
+
+vector<vector<string>> create_challenge_set(){
+    /*
+    The challenge set is composed of a vector of vectors of strings.
+    Each vector of strings is composed, respectively, of:
+    1st.Its type (battle,trivia,puzzle)
+    2nd.The challenge
+    3rd.The answer     
+    There will be 31 challenges max, which will be max number 
+    of nescessary challenges for a BST of depth 4
+    */
+
+    vector<vector<string>> full_set;
+    vector<string> single_challenge;
+    
+    /*Firstly the Trivia set (11 problems)*/
+    vector<string> trivia_q;
+    vector<string> trivia_a;
+    //1
+    trivia_q.push_back("What is the world’s most widely spoken native tongue language?");
+    trivia_a.push_back("Mandarim");
+    //2
+    trivia_q.push_back("The atomic number of an element indicate the number of _______ in it");
+    trivia_a.push_back("Protons");
+    //3
+    trivia_q.push_back("The term ‘Pulmonary’ relates to which organ?");
+    trivia_a.push_back("Lungs");
+    //4
+    trivia_q.push_back("Which country is the world’s biggest producer of coffee?");
+    trivia_a.push_back("Brazil");
+    //5
+    trivia_q.push_back("What is the study of Fossils?");
+    trivia_a.push_back("Palaeontology");    
+    //6
+    trivia_q.push_back("The South American city of Brazillia is built in the shape of what?");
+    trivia_a.push_back("Airplane");    
+    //7
+    trivia_q.push_back("Who was the Greek god of war?");
+    trivia_a.push_back("Ares");    
+    //8
+    trivia_q.push_back("Who was the Roman god of war?");
+    trivia_a.push_back("Mars");
+    //9
+    trivia_q.push_back("A Binary Tree in which every node other than the leaves has two children is called _____");
+    trivia_a.push_back("Full");    
+    //10
+    trivia_q.push_back("A Binary Tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible is called ________");
+    trivia_a.push_back("Complete");    
+    //11
+    trivia_q.push_back("What is the S.I unit of capacitance");
+    trivia_a.push_back("Farad");
+    
+    for(int i = 0; i < 11; i++){
+    
+        single_challenge.push_back("Trivia");
+        single_challenge.push_back(trivia_q.at(i));
+        single_challenge.push_back(trivia_a.at(i));
+        full_set.push_back(single_challenge);
+        single_challenge.erase(single_challenge.begin(),single_challenge.end());        
+    }
+    
+    
+    /*Puzzles*/
+    
+    
+    
+    
+    return full_set;
 }
