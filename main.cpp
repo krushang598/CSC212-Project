@@ -69,6 +69,8 @@ vector<vector<string>> create_challenge_set(){
     //11
     trivia_q.push_back("What is the S.I unit of capacitance");
     trivia_a.push_back("Farad");
+
+  
     
     for(int i = 0; i < 11; i++){
     
@@ -85,6 +87,40 @@ vector<vector<string>> create_challenge_set(){
     vector<string> puzzle_q;
     vector<string> puzzle_a;
     
+        //12
+    puzzle_q.push_back("It is flat as a leaf, round as a ring, Has two eyes, yet cannot see a thing. What is it ? ");
+    puzzle_a.push_back("Button");
+    //13
+    puzzle_q.push_back("What is 3/7 chicken, 2/3 cat, and a half goat?");
+    puzzle_a.push_back("Chicago");
+    //14
+    puzzle_q.push_back("Which seven-letter word contains dozens of letters? ");
+    puzzle_a.push_back("Mailbox");
+    //15
+    puzzle_q.push_back("I have six faces and twenty-one eyes, yet I can not see. What am I ? ");
+    puzzle_a.push_back("Dice");
+    //16
+    puzzle_q.push_back("What is orange and sounds like a parrot? ");
+    puzzle_a.push_back("Carrot");
+    //17
+    puzzle_q.push_back("You use a knife to slice my head, And weep beside me when I’m dead. What am I ?");
+    puzzle_a.push_back("Onion");
+    //18
+    puzzle_q.push_back("You throw away the outside and cook the inside. Then you eat the outside and throw away the inside. What do you eat? ");
+    puzzle_a.push_back("Corn");
+    //19
+    puzzle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    puzzle_a.push_back("Charcoal");
+    //20
+    puzzle_q.push_back("What occurs once in every minute, twice in every moment, but never in a thousand years? ");
+    puzzle_a.push_back("M");
+    //21
+    puzzle_q.push_back("What gets wetter as it dries ? ");
+    puzzle_a.push_back("Towel");
+    //22
+    puzzle_q.push_back("When you have me, you want to share me. When you share me, you no longer have me.");
+    puzzle_a.push_back("Secret");
+    
     
     for(int j = 0; j < 10; j++){
         single_challenge.push_back("Puzzle");
@@ -94,6 +130,41 @@ vector<vector<string>> create_challenge_set(){
         single_challenge.erase(single_challenge.begin(),single_challenge.end());
     }
     
+    /*Battle*/
+    
+    vector<string> battle_q;
+    vector<string> battle_a;
+    
+    //22
+    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    battle_a.push_back("Charcoal");
+    //23
+    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    battle_a.push_back("Charcoal");
+    //24
+    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    battle_a.push_back("Charcoal");
+    //25
+    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    battle_a.push_back("Charcoal");
+    //26
+    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    battle_a.push_back("Charcoal");
+    //27
+    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    battle_a.push_back("Charcoal");
+    //28
+    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    battle_a.push_back("Charcoal");
+    //29
+    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    battle_a.push_back("Charcoal");
+    //30
+    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    battle_a.push_back("Charcoal");
+    //31
+    battle_q.push_back("What’s black when you get it, red when you use it, and white when you’re all through with it? ");
+    battle_a.push_back("Charcoal");
     
     
     
