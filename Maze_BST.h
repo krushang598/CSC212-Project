@@ -19,9 +19,8 @@ class node{
     parent = NULL; 
   }
   
-  node(int value,vector<std:string> c){
+  node(int value){
     number = value;
-    challenge_set = c;
     parent = NULL;
     right = NULL;
     left = NULL;
@@ -30,10 +29,13 @@ class node{
   node::right(){return *right;}
   node::left(){return *left;}
   node::parent(){return *parent;}
+  node::challenge(){return challenge_set;}
   
   node::set_right(node *ptr){ this->right = ptr;}
   node::set_left(node *ptr){ this->left = ptr;}
   node::set_parent(node *ptr){ this->parent = ptr;}
+  node::set_challenge(vector<std::string> input){this->challenge_set = input;}
+  
   
 }
 
@@ -47,6 +49,10 @@ namespace BST{
     Maze();
     ~Maze();
     Maze create_game(int difficulty, vector<vector<std:string>> every_challenge);
+    bool node_play(node *ptr);
+    bool node_battle(node *ptr);
+    bool play_game(Maze game_board);
+    
     
   }
 }
