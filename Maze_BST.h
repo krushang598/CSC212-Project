@@ -61,7 +61,7 @@ namespace BST{
     Maze build_maze(int difficulty, vector<vector<std:string>> every_challenge);
     bool node_play(node *ptr);
     bool node_battle(node *ptr);
-    bool play_game();
+    bool play_game(Maze game_board);
     void set_root(node *ptr){this->root = ptr;}
     void set_level(int lvl){this->level = lvl;}
     Maze operator=(const Maze& b);
