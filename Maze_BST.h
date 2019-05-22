@@ -30,11 +30,21 @@ class node{
   node::left(){return *left;}
   node::parent(){return *parent;}
   node::challenge(){return challenge_set;}
+  node::number(){return number;}
   
   node::set_right(node *ptr){ this->right = ptr;}
   node::set_left(node *ptr){ this->left = ptr;}
   node::set_parent(node *ptr){ this->parent = ptr;}
+  node::set_number(int value){ this->number = value;}
   node::set_challenge(vector<std::string> input){this->challenge_set = input;}
+  
+  void operator=(const node& n){
+    this->set_right(n.right());
+    this->set_left(n.left());
+    this->set_parent(n.parent());
+    this->set_number(n.number());
+    this->set_challenge(n.challenge());
+  }
   
   
 }
