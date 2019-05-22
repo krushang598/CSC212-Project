@@ -54,6 +54,7 @@ namespace BST{
     private:
     node *root;
     int level;
+    int left_counter
       
     public:
     Maze();
@@ -64,6 +65,7 @@ namespace BST{
     bool play_game(Maze game_board);
     void set_root(node *ptr){this->root = ptr;}
     void set_level(int lvl){this->level = lvl;}
+    void set_left_counter(int v){this->left_counter = v;}
     Maze operator=(const Maze& b);
     
   }
