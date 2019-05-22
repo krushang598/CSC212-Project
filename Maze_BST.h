@@ -59,7 +59,7 @@ namespace BST{
     public:
     Maze();
     ~Maze();
-    Maze build_maze(int difficulty, vector<vector<std:string>> every_challenge);
+    Maze build_maze(int difficulty, vector<vector<std:string>> challenge_set, int i, node *root);
     bool node_play(node *ptr);
     bool node_battle(node *ptr);
     bool play_game(Maze game_board);
