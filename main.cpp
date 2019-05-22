@@ -10,8 +10,14 @@ int main()
 {
     int menu = 0;
     int wrong_ans = 0;
-    int select = 0;
+    int level_input = 0;
     bool diff_level, input = false;
+    
+    
+    BST::Maze game_maze(); 
+    
+    
+    
     
     Cout<<"-----------------------Game of Maze-------------------------";
     while(!diff_level)
@@ -25,27 +31,27 @@ int main()
         {
             while(!input)
             {
-                cout<<"Choose Difficulty: "<<endl;
-                cout<<"1. Easy"<<emdl;
-                cout<<"2. Medium"<<endl;
-                cout<<"3. Hard"<<endl;
-                cin>>select;
+                cout << "Choose Difficulty: "<<endl;
+                cout << "1. Easy"<<endl;
+                cout << "2. Medium"<<endl;
+                cout << "3. Hard"<<endl;
+                cin>>level_input;
                 
-                if(select == 1)
+                if(level_input == 1)
                 {
-                    index = true;
+                    input = true;
                 }
-                else if(select == 2)
+                else if(level_input == 2)
                 {
-                    index = true;
+                    input = true;
                 }
-                else if(select == 3)
+                else if(level_input == 3)
                 {
-                    index = true;
+                    input = true;
                 }
                 else
                 {
-                    Please enter correct option:
+                    cout << "Please enter an acceptable input (1,2 or 3)." << endl;
                 }
                 
             }
@@ -67,19 +73,19 @@ int main()
         }
         else if(menu == 3)
         {
-            diff_level = true;
-            goto end;
+            break;
+            
         }
         else
         {
-            cout<<"Please enter a valid input.";
+            cout << "Please enter an acceptable input (1,2 or 3)." << endl;
         }
     }
     
     
     
     
-    end:
+    
     return 0;
 }
 
