@@ -26,17 +26,17 @@ class node{
     left = NULL;
   }
   
-  node::right(){return *right;}
-  node::left(){return *left;}
-  node::parent(){return *parent;}
-  node::challenge(){return challenge_set;}
-  node::number(){return number;}
+  node node::right(){return *right;}
+  node node::left(){return *left;}
+  node node::parent(){return *parent;}
+  vector<std::string> node::challenge(){return challenge_set;}
+  int node::number(){return number;}
   
-  node::set_right(node *ptr){ this->right = ptr;}
-  node::set_left(node *ptr){ this->left = ptr;}
-  node::set_parent(node *ptr){ this->parent = ptr;}
-  node::set_number(int value){ this->number = value;}
-  node::set_challenge(vector<std::string> input){this->challenge_set = input;}
+  void node::set_right(node *ptr){ this->right = ptr;}
+  void node::set_left(node *ptr){ this->left = ptr;}
+  void node::set_parent(node *ptr){ this->parent = ptr;}
+  void node::set_number(int value){ this->number = value;}
+  void node::set_challenge(vector<std::string> input){this->challenge_set = input;}
   
   void operator=(const node& n){
     this->set_right(n.right());
@@ -66,6 +66,7 @@ namespace BST{
     void set_root(node *ptr){this->root = ptr;}
     void set_level(int lvl){this->level = lvl;}
     void set_left_counter(int v){this->left_counter = v;}
+    int left_counter(){return left_counter;}
     Maze operator=(const Maze& b);
     
   }
