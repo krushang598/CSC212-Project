@@ -67,6 +67,7 @@ namespace BST{
     void set_level(int lvl){this->level = lvl;}
     void set_left_counter(int v){this->left_counter = v;}
     int left_counter(){return left_counter;}
+    node* root(){return *root;}
     Maze operator=(const Maze& b);
     
   }
