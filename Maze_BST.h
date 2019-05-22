@@ -48,10 +48,11 @@ namespace BST{
     public:
     Maze();
     ~Maze();
-    bool play_game(int difficulty, vector<vector<std:string>> every_challenge);
+    Maze build_maze(int difficulty, vector<vector<std:string>> every_challenge);
     bool node_play(node *ptr);
     bool node_battle(node *ptr);
-    
+    bool play_game();
+    Maze operator=(const Maze& b);
     
   }
 }
