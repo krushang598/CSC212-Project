@@ -9,14 +9,23 @@
 
 using namespace std;
 
-Maze create_game(int difficulty, vector<vector<std:string>> every_challenge){
-   
+BST::Maze build_maze(int difficulty, vector<vector<std:string>> challenge_set){
+   /* This functions will not only build the BST which will be used as the maze
+      (Easy = Depth of 3, 7 nodes; Medium = Depth of 4, 15 nodes; Hard = Depth of 5, 31 nodes)
+      , but also populate each node (randomly) with one of the unique challenge.
+      Then trasverse through it and play the game. Win makes you go right, lose makes you go left.
+      Go left twice and you loose the game
+   */
+    BST::Maze game_board();
     vector<vector<string>> challenge_set = create_challenge_set();
     srand(time(0));
     random_shuffle(challenge_set.begin(),challenge_set.end());
+	
+	
     
     
 }
+
 bool node_play(node *ptr){
     string player_answer, correct_answer;
     vector<string> challenge;
@@ -157,13 +166,10 @@ bool node_battle(node *ptr){
     }
 }
 
-
-
-bool play_game(Maze game_board){
-    
+void operator=(const Maze& b){
+ 	this->set_root(b.root());
+	this->set_level(b.level());
 }
-
-
 
 vector<vector<string>> create_challenge_set(){
     /*
@@ -264,9 +270,6 @@ vector<vector<string>> create_challenge_set(){
     //21
     puzzle_q.push_back("What gets wetter as it dries ? ");
     puzzle_a.push_back("Towel");
-    //22
-    puzzle_q.push_back("When you have me, you want to share me. When you share me, you no longer have me.");
-    puzzle_a.push_back("Secret");
     
     
     for(int j = 0; j < 10; j++){
@@ -277,7 +280,7 @@ vector<vector<string>> create_challenge_set(){
         puzzle_single_challenge.erase(puzzle_single_challenge.begin(),puzzle_single_challenge.end());
     }
     /*
-    Battle Set (5 problems)
+    Battle Set (10 problems)
     The Battle rooms are different, 5 questions they have to answer in a set interval of time.
     */
     
@@ -285,6 +288,81 @@ vector<vector<string>> create_challenge_set(){
     vector<string> battle_a;
     vector<string> battle_single_challenge;
     
+`   //22.0
+    battle_q.push_back("Is the domestic dog a carnivore, omnivore or herbivore?");
+    battle_a.push_back("Omnivore");
+    //22.1
+    battle_q.push_back("What is a dog’s most powerful sense?");
+    battle_a.push_back("Smell");
+    //22.2
+    battle_q.push_back("Because of dogs unique relationship with humans they are often referred to as man’s best________?");
+    battle_a.push_back("Friend");
+    //22.3
+    battle_q.push_back("The tallest dog in the world stands over 150cm in height.(T/F)");
+    battle_a.push_back("F");
+    //22.4
+    battle_q.push_back("What is the name of the phobia for someone who has a fear of dogs?");
+    battle_a.push_back("Cynophobia");    
+    //23.0
+    battle_q.push_back("The two holes in your nose are called?");
+    battle_a.push_back("Nostrils");
+    //23.1
+    battle_q.push_back("The bones around your chest that protect organs such as the heart are called what?");
+    battle_a.push_back("Ribs");
+    //23.2
+    battle_q.push_back("The flow of blood through your heart and around your body is called?");
+    battle_a.push_back("Circulation");
+    //23.3
+    battle_q.push_back("What is the name of the long pipe that shifts food from the back of your throat down to your stomach? ");
+    battle_a.push_back("Esophagus");
+    //23.4
+    battle_q.push_back("The bones that make up your spine are called what?");
+    battle_a.push_back("Vertebrae");
+    //24.0
+    battle_q.push_back("What is the first element on the periodic table?");
+    battle_a.push_back("Hydrogen");
+    //24.1
+    battle_q.push_back("What is the centre of an atom called?");
+    battle_a.push_back("Nucleus");
+    //24.2
+    battle_q.push_back(" Acids have a pH level below 7.(T/F)");
+    battle_a.push_back("T");
+    //24.3
+    battle_q.push_back("Atoms of the same chemical element that have different atomic mass are known as?");
+    battle_a.push_back("Isotopes");
+    //24.4
+    battle_q.push_back("At room temperature, what is the only metal that is in liquid form?");
+    battle_a.push_back("Mercury");
+    //25.0
+    battle_q.push_back("How many horns did Triceratops have?(Enter a number)");
+    battle_a.push_back("3");
+    //25.1
+    battle_q.push_back("The name dinosaur means ‘terrible lizard’.(T/F)");
+    battle_a.push_back("T");
+    //25.2
+    battle_q.push_back("Birds evolved from dinosaurs.(T/F)");
+    battle_a.push_back("T");
+    //25.3
+    battle_q.push_back("Dinosaur fossils have been found on every continent of Earth.(T/F)");
+    battle_a.push_back("T");
+    //25.4
+    battle_q.push_back("What type of dinosaur features on the logo of the Toronto based NBA basketball team?");
+    battle_a.push_back("Velociraptor");    
+    //26.0
+    battle_q.push_back("In what country is the Taj Mahal found?");
+    battle_a.push_back("India");
+    //26.1
+    battle_q.push_back("Which country gave the Statue of Liberty to the USA as a gift?");
+    battle_a.push_back("France");
+    //26.2
+    battle_q.push_back("The Great Sphinx of Giza has the head of a human and the body of a what?");
+    battle_a.push_back("Lion");
+    //26.3
+    battle_q.push_back("Did the Eiffel Tower open in 1789 or 1889?");
+    battle_a.push_back("1889");
+    //26.4
+    battle_q.push_back("What is the largest planet in the Solar System?");
+    battle_a.push_back("Jupiter");	
 `   //27.0
     battle_q.push_back("A thermometer is a device used to measure what?");
     battle_a.push_back("Temperature");
@@ -361,7 +439,7 @@ vector<vector<string>> create_challenge_set(){
     battle_q.push_back("Capital of Russia?");
     battle_a.push_back("Moscow"); 
     
-    for(int k = 0; k < 5; k++){
+    for(int k = 0; k < 10; k++){
         battle_single_challenge.push_back("Puzzle");
         for(int h = 0; h < 5; h++){
             battle_single_challenge.push_back(puzzle_q.at(i));
