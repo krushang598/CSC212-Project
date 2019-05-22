@@ -52,6 +52,8 @@ namespace BST{
     bool node_play(node *ptr);
     bool node_battle(node *ptr);
     bool play_game();
+    void set_root(node *ptr){this->root = ptr;}
+    void set_level(int lvl){this->level = lvl;}
     Maze operator=(const Maze& b);
     
   }
