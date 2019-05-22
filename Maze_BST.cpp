@@ -166,6 +166,51 @@ bool node_battle(node *ptr){
     }
 }
 
+bool play_game(Maze game_board, node *current){
+	
+	vector<string> challenge;
+	challenge = current.challenge();
+	bool passed = false;
+	
+	if(challenge.at(0) == "Battle"){
+		passed = node_battle(current);
+		if(passed){
+			if(current->right() != NULL){
+				game_board.set_left_counter(0);
+				play_game(game_board,current->right());
+			}else{
+				return True;
+			}
+		}else{
+			game_board.set_left_counter(game_board.left_counter() + 1);
+			if(game_board.left_counter() == 2){
+				return False;
+			}else{
+				play_game(game_board,current->left());
+			}
+		}
+	}else{
+		passed = node_play(current);
+		if(passed){
+			if(current->right() != NULL){
+				game_board.set_left_counter(0);
+				play_game(game_board,current->right());
+			}else{
+				return True;
+			}
+		}else{
+			game_board.set_left_counter(game_board.left_counter() + 1);
+			if(game_board.left_counter() == 2){
+				return False;
+			}else{
+				play_game(game_board,current->left());
+			}
+		}
+	}
+
+}
+
+
 void operator=(const Maze& b){
  	this->set_root(b.root());
 	this->set_level(b.level());
