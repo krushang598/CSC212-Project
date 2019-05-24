@@ -1,7 +1,7 @@
 //Implementation of the maze class
 #include <iostream>
 #include <vector>
-#include <stdl>
+#include <cstdlib>
 #include <chrono>
 #include <string>
 #include <algorithm>
